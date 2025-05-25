@@ -1,0 +1,59 @@
+<!-- templates/base.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>{{ title }}</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container mt-4">
+      <h2 class="text-center text-primary">{{ title }}</h2>
+      <form method="POST">
+        <div class="form-group">
+          <label>Text</label>
+          <input
+            type="text"
+            class="form-control"
+            name="text"
+            required
+            placeholder="Enter text"
+          />
+        </div>
+        <div class="form-group">
+          <label>Key</label>
+          <input
+            type="text"
+            class="form-control"
+            name="key"
+            required
+            placeholder="Enter key"
+          />
+        </div>
+        <button type="submit" name="encrypt" class="btn btn-primary">
+          Encrypt
+        </button>
+        <button type="submit" name="decrypt" class="btn btn-success ml-2">
+          Decrypt
+        </button>
+      </form>
+
+      {% if error %}
+      <div class="alert alert-danger mt-3">
+        <strong>Error:</strong> {{ error }}
+      </div>
+      {% endif %} {% if result %}
+      <div class="alert alert-info mt-4">
+        <strong>Result:</strong> {{ result }}
+      </div>
+      {% endif %}
+
+      <div class="mt-4">
+        <a href="/" class="btn btn-secondary">Back to Home</a>
+      </div>
+    </div>
+  </body>
+</html>
