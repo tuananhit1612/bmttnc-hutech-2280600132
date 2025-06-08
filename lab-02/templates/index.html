@@ -1,0 +1,103 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Cipher Menu</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      body {
+        background: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+        min-height: 100vh;
+      }
+      .cipher-card {
+        transition: transform 0.2s, box-shadow 0.2s;
+        border: none;
+        border-radius: 1rem;
+      }
+      .cipher-card:hover {
+        transform: translateY(-8px) scale(1.03);
+        box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+      }
+      .cipher-icon {
+        font-size: 2.5rem;
+        color: #fda085;
+      }
+      .card-title {
+        font-weight: 600;
+        color: #333;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container py-5">
+      <h2 class="text-center text-dark mb-5" style="font-weight:700; letter-spacing:2px;">
+        Cipher Algorithms
+      </h2>
+      <div class="row justify-content-center">
+        <div class="col-md-4 mb-4">
+          <a href="/caesar" style="text-decoration:none;">
+            <div class="card cipher-card text-center shadow-sm">
+              <div class="card-body">
+                <i class="fas fa-key cipher-icon mb-3"></i>
+                <h5 class="card-title">Caesar Cipher</h5>
+                <p class="card-text text-muted">Simple shift cipher using a fixed key.</p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-4 mb-4">
+          <a href="/vigenere" style="text-decoration:none;">
+            <div class="card cipher-card text-center shadow-sm">
+              <div class="card-body">
+                <i class="fas fa-lock cipher-icon mb-3"></i>
+                <h5 class="card-title">Vigenère Cipher</h5>
+                <p class="card-text text-muted">Polyalphabetic substitution cipher.</p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-4 mb-4">
+          <a href="/railfence" style="text-decoration:none;">
+            <div class="card cipher-card text-center shadow-sm">
+              <div class="card-body">
+                <i class="fas fa-grip-lines cipher-icon mb-3"></i>
+                <h5 class="card-title">Rail Fence Cipher</h5>
+                <p class="card-text text-muted">A form of transposition cipher.</p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-4 mb-4">
+          <a href="/playfair" style="text-decoration:none;">
+            <div class="card cipher-card text-center shadow-sm">
+              <div class="card-body">
+                <i class="fas fa-th-large cipher-icon mb-3"></i>
+                <h5 class="card-title">Playfair Cipher</h5>
+                <p class="card-text text-muted">Digraph substitution cipher using a matrix.</p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-4 mb-4">
+          <a href="/transposition" style="text-decoration:none;">
+            <div class="card cipher-card text-center shadow-sm">
+              <div class="card-body">
+                <i class="fas fa-random cipher-icon mb-3"></i>
+                <h5 class="card-title">Transposition Cipher</h5>
+                <p class="card-text text-muted">Rearranges the letters of the plaintext.</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
